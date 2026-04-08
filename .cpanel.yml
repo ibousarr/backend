@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
+    - /bin/cp -r assets $DEPLOYPATH
+    - /bin/cp -r js $DEPLOYPATH
+    - /bin/cp -r node_modules $DEPLOYPATH
+    - /bin/cp -r server $DEPLOYPATH

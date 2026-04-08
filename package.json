@@ -1,0 +1,27 @@
+{
+	"type": "module",
+	"scripts": {
+		"dev": "vite-node src/server.js",
+		"build": "vite build",
+		"start": "node dist/server.cjs",
+		"db:reset": "node ./src/models/reset.js"
+	},
+	"devDependencies": {
+		"nodemon": "^3.1.9",
+		"vite": "^6.0.5",
+		"vite-node": "^2.1.8"
+	},
+	"dependencies": {
+		"cookie-parser": "^1.4.6",
+		"dotenv": "^16.4.7",
+		"express": "^4.21.2",
+		"jsonwebtoken": "^9.0.2",
+		"jwt-decode": "^4.0.0",
+		"pg": "^8.13.1",
+		"pg-hstore": "^2.3.4",
+		"sequelize": "^6.37.2",
+		"swagger-jsdoc": "^6.2.8",
+		"swagger-ui-express": "^5.0.1",
+		"zod": "^3.23.4"
+	}
+}
