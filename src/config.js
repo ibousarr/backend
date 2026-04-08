@@ -3,11 +3,15 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const server = {
-  url: process.env.SERVER_URL || `http://localhost:${process.env.PORT || 3000}`,
+  url: process.env.SERVER_URL || `https://backend.ibousarr.isdigit.sn`,
   host: process.env.HOST || "0.0.0.0",
   port: process.env.PORT || 3000,
   secure: process.env.SECURE || false,
-  cors: process.env.CORS || ""
+  cors: process.env.CORS || "",
+  owner: {
+    name: process.env.OWNER_NAME || "Ibrahima SARR",
+    email: process.env.OWNER_EMAIL || "sarrsindian@gmail.com"
+  }
 };
 
 const database = {

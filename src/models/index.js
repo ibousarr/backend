@@ -10,5 +10,8 @@ export const sequelize = new Sequelize({
   host: host,
   port: port,
   ssl: false,
-  clientMinMessages: 'notice',
+  dialectOptions: {
+    ssl: false,
+    clientMinMessages: 'notice',
+  },
 });

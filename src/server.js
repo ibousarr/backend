@@ -71,9 +71,9 @@ app.use(cookieParser());
 
 app.get('/config', (req, res) => {
   const { dialect, database, user, _, dbhost } = config.database;
-  const { url, host, port, secure, cors } = config.server;
+  const { url, host, port, secure, cors, owner } = config.server;
   res.status(200).json({
-    url, host, port, secure, cors,
+    url, host, port, secure, cors, owner,
     dialect, database, user, dbhost
   })
 });
