@@ -3,9 +3,9 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const server = {
-  url: process.env.SERVER_URL || `https://backend.ibousarr.isdigit.sn`,
+  url: process.env.SERVER_URL || "http://localhost:3020",
   host: process.env.HOST || "0.0.0.0",
-  port: process.env.PORT || 3000,
+  port: process.env.PORT || 3020,
   secure: process.env.SECURE || false,
   cors: process.env.CORS || "",
   owner: {
@@ -19,7 +19,7 @@ const database = {
   database: process.env.DATABASE_DBNAME,
   user: process.env.DATABASE_USER,
   password: process.env.DATABASE_PASSWORD,
-  host: process.env.DATABASE_HOST,
+  dbhost: process.env.DATABASE_HOST,
   port: process.env.DATABASE_PORT,
   ssl: process.env.DATABASE_SSL || false
 };

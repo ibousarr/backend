@@ -2,6 +2,6 @@
 return [
     'server' => 'postgres', // Nom du conteneur PostgreSQL
     'username' => 'postgres',
-    'password' => 'password',
+    'password' => 'kisarr',
     'db' => 'portfolio',
 ];

@@ -5,6 +5,16 @@ import { User } from "../models/user.js";
 
 export default class AuthController {
 
+    static async getAllUsers(req, res) {
+      try {
+        const users = await User.findAll();
+        res.status(200).json(users);
+      } catch (error) {
+        console.error('Error fetching users:', error);
+        res.status(500).json({ error: 'An error occurred while fetching users.' });
+      }
+    }
+
   // ============================================================
   // ====================== USER SIGNUP =========================
   // ============================================================
@@ -66,9 +76,12 @@ export default class AuthController {
   // ============================================================
 
   static async logout(_, res) {
+    
     res.status(204).json({ status: 204, message: "Successfully logged out"});
   }
 }
+
+
 
 // ============================================================
 // ====================== BODY SCHEMA =========================
@@ -76,7 +89,7 @@ export default class AuthController {
 
 function buildSignupBodySchema() {
   return z.object({
-    username: z.string().min(1),
+    username: z.string().min(1).optional(),
     email: z.string().min(1).email(),
     password: z.string().min(8)
   });

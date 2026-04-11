@@ -1,0 +1,24 @@
+{
+  "bons": [
+    {
+      "id": "cmnkk0odh0000yno15zzwda46",
+      "code": "AVRIL-2026",
+      "title": "Bon d'achat avril 2026",
+      "description": "Bon d'achat pour avril 2026",
+      "dueDate": "2026-04-30T00:00:00.000Z",
+      "paid": false,
+      "status": 1,
+      "userId": "cmnkeiv6200014ko1i2nfvsn6"
+    },
+    {
+      "id": "cmnkn5j9s0000fwo1kjbomzed",
+      "code": "JUIN-2026",
+      "title": "Bon d'achat juin 2026",
+      "description": "Bon d'achat pour juin 2026",
+      "dueDate": "2026-06-30T00:00:00.000Z",
+      "paid": false,
+      "status": 2,
+      "userId": "cmnkeiv6200014ko1i2nfvsn6"
+    }
+  ]
+}

@@ -10,6 +10,7 @@ import swaggerJsDoc from 'swagger-jsdoc';
 
 import authRoutes from './routes/authRoutes.js'
 import projectRoutes from './routes/projectRoutes.js'
+import bonRoutes from './routes/bonRoutes.js'
 
 // wrapper o2switch
 if (typeof(PhusionPassenger) !== 'undefined') {
@@ -30,13 +31,13 @@ const swaggerOptions = {
   swaggerDefinition: {
     openapi: '3.0.0', // Utilisation de la version OpenAPI 3.0.0
     info: {
-      title: 'API Documentation',
+      title: 'Kisarr backend-API Documentation',
       version: '1.0.0',
-      description: 'Documentation interactive pour mon API',
+      description: 'Documentation interactive pour mon API sur ' + url,
     },
     servers: [
       {
-        url: url, 
+        url: 'http://127.0.0.1:3020', 
         description: `API Serveur - ${url}`,
       },
     ],
@@ -70,17 +71,18 @@ app.use((req, res, next) => {
 app.use(cookieParser());
 
 app.get('/config', (req, res) => {
-  const { dialect, database, user, _, dbhost } = config.database;
+  const { dialect, database, user, password, dbhost } = config.database;
   const { url, host, port, secure, cors, owner } = config.server;
   res.status(200).json({
     url, host, port, secure, cors, owner,
-    dialect, database, user, dbhost
+    dialect, database, user, password, dbhost
   })
 });
 
 // Authentication routes
 app.use('/auth', authRoutes);
 app.use('/projects', projectRoutes);
+app.use('/bons', bonRoutes);
 
 // Any API resources
 app.get("/public-stuff", getPublicStuff);

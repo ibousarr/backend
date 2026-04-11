@@ -35,7 +35,7 @@ services:
     #  - "5434:5432"
   adminer:
     image: adminer:latest
-    container_name: backend_adminer
+    container_name: backend_admin
     restart: always
     #ports:
     #  - "8080:8080"
@@ -51,3 +51,5 @@ networks:
 # 109.234.160.118
 
 # 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
+
+# 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
